@@ -1,20 +1,16 @@
 // pages/home.tsx
 
-import Head from "next/head";
+import React from "react";
+import Card from "@/components/common/Card";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Home | ALX Project</title>
-      </Head>
-      <section className="min-h-screen flex flex-col items-center justify-center bg-blue-50 text-center">
-        <h1 className="text-4xl font-bold text-blue-800 mb-4">Welcome to the Home Page</h1>
-        <p className="text-lg text-gray-600">
-          Explore our listings, learn more about us, and find your dream property!
-        </p>
-      </section>
-    </>
+    <div className="p-6 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6">Welcome to the Home Page</h1>
+      
+      <Card title="Sample Card Title" content="This is some sample content inside the card." />
+      <Card title="Another Card" content="More content goes here." />
+    </div>
   );
 };
 
