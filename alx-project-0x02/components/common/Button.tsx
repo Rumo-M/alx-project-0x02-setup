@@ -1,30 +1,18 @@
-// components/common/Button.tsx
+// pages/about.tsx
 
 import React from "react";
+import Button from "@/components/common/Button";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  variant?: "primary" | "secondary";
-}
-
-const Button: React.FC<ButtonProps> = ({
-  children,
-  variant = "primary",
-  ...props
-}) => {
-  const baseClasses =
-    "px-4 py-2 rounded font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2";
-
-  const variantClasses =
-    variant === "primary"
-      ? "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
-      : "bg-gray-300 text-gray-800 hover:bg-gray-400 focus:ring-gray-400";
-
+const About: React.FC = () => {
   return (
-    <button className={`${baseClasses} ${variantClasses}`} {...props}>
-      {children}
-    </button>
+    <div className="max-w-4xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-4">About Us</h1>
+      <p className="mb-6">
+        Welcome to our site! We are committed to providing the best experience.
+      </p>
+      <Button onClick={() => alert("Thanks for clicking!")}>Click Me</Button>
+    </div>
   );
 };
 
-export default Button;
+export default About;
