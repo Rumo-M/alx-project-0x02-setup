@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <Link href="/">ALX Listing</Link>
       </div>
       <nav className="space-x-4">
-        <Link href="/" className="text-gray-700 hover:text-blue-500">
+        <Link href="/home" className="text-gray-700 hover:text-blue-500">
           Home
         </Link>
         <Link href="/about" className="text-gray-700 hover:text-blue-500">
