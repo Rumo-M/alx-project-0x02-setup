@@ -1,17 +1,23 @@
-// ButtonProps interface
-export interface ButtonProps {
-  size?: "small" | "medium" | "large";
-  shape?: "rounded-sm" | "rounded-md" | "rounded-lg";
-  onClick?: () => void;
-  children?: React.ReactNode;
-  disabled?: boolean;
-  className?: string;
-}
-
-// CardProps interface
 export interface PostProps {
   userId: number;
   id: number;
   title: string;
   body: string;
+}
+
+export interface UserProps {
+  id: number;
+  username: string;
+  email: string;
+}
+
+export interface CardProps {
+  title: string;
+  content: string;
+}
+
+export interface ButtonProps {
+  label: string;
+  size?: "small" | "medium" | "large";
+  shape?: "rounded-sm" | "rounded-md";
 }
