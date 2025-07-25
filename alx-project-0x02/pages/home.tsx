@@ -1,16 +1,19 @@
 // pages/home.tsx
 
 import React from "react";
-import Card from "@/components/common/Card";
+import Header from "@/components/layout/Header";
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Welcome to the Home Page</h1>
-      
-      <Card title="Sample Card Title" content="This is some sample content inside the card." />
-      <Card title="Another Card" content="More content goes here." />
-    </div>
+    <>
+      <Header />
+      <div className="p-6">
+        <h1 className="text-2xl font-bold">Welcome to the Home Page</h1>
+        <p className="mt-2 text-gray-700">
+          This is the home page of our Next.js project.
+        </p>
+      </div>
+    </>
   );
 };
 
