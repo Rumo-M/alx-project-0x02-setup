@@ -1,17 +1,19 @@
 // pages/about.tsx
 
 import React from "react";
-import Button from "@/components/common/Button";
+import Header from "@/components/layout/Header";
 
-const About: React.FC = () => {
+const About = () => {
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">About Us</h1>
-      <p className="mb-6 text-lg">
-        We are a company dedicated to delivering excellent service and innovative solutions.
-      </p>
-      <Button onClick={() => alert("Button clicked!")}>Learn More</Button>
-    </div>
+    <>
+      <Header />
+      <div className="p-6">
+        <h1 className="text-2xl font-bold">About Us</h1>
+        <p className="mt-2 text-gray-700">
+          This page provides information about the project and its goals.
+        </p>
+      </div>
+    </>
   );
 };
 
