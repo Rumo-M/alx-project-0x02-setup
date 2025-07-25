@@ -23,10 +23,15 @@ export interface UserProps {
   id: number;
   name: string;
   username: string;
-  email: string; // ✅ This is the required field
+  email: string; // ✅ Required field
   address: {
     street: string;
     city: string;
     zipcode: string;
   };
+}
+
+export interface CardProps {
+  title: string;
+  content: string;
 }
