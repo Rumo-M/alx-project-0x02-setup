@@ -1,22 +1,8 @@
-export interface Address {
-  street: string;
-  city: string;
-  zipcode: string;
-}
-
-export interface Company {
-  name: string;
-  catchPhrase: string;
-  bs: string;
-}
-
-export interface UserProps {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  address: Address;
-  phone: string;
-  website: string;
-  company: Company;
+export interface ButtonProps {
+  size?: "small" | "medium" | "large";
+  shape?: "rounded-sm" | "rounded-md" | "rounded-lg";
+  onClick?: () => void;
+  children?: React.ReactNode;
+  disabled?: boolean;
+  className?: string;
 }
