@@ -1,17 +1,15 @@
 import React from "react";
-import Button from "@/components/common/Button";
+import Header from "@/components/layout/Header";
 
-const About: React.FC = () => {
+const About = () => {
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-4">About Us</h1>
-      <p className="mb-6">
-        Welcome to our site! We provide awesome stuff.
-      </p>
-      <Button size="medium" shape="rounded-md">
-        Click Me
-      </Button>
-    </div>
+    <>
+      <Header />
+      <div className="p-8">
+        <h1 className="text-3xl font-bold mb-4">About Page</h1>
+        <p>This is a simple About page for the application.</p>
+      </div>
+    </>
   );
 };
 
