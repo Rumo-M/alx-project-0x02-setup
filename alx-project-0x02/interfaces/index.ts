@@ -35,3 +35,11 @@ export interface CardProps {
   title: string;
   content: string;
 }
+
+export interface ButtonProps {
+  action: () => void;
+  buttonLabel: string;
+  buttonBackgroundColor?: string;
+  size?: 'small' | 'medium' | 'large';
+  shape?: 'rounded-sm' | 'rounded-md' | 'rounded-lg';
+}
