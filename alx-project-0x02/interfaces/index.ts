@@ -20,7 +20,7 @@ export interface PropertyProps {
 }
 
 export interface UserProps {
-  id: number;
+  userId: number;        // Changed here
   name: string;
   username: string;
   email: string; // ✅ Required field
