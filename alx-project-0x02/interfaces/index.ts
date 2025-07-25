@@ -9,7 +9,9 @@ export interface ButtonProps {
 }
 
 // CardProps interface
-export interface CardProps {
+export interface PostProps {
+  userId: number;
+  id: number;
   title: string;
-  content: string;
+  body: string;
 }
