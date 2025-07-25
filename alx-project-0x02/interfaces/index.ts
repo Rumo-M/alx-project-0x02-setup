@@ -1,23 +1,20 @@
-export interface PostProps {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
+export interface Address {
+  state: string;
+  city: string;
+  country: string;
 }
 
-export interface UserProps {
-  id: number;
-  username: string;
-  email: string;
-}
-
-export interface CardProps {
-  title: string;
-  content: string;
-}
-
-export interface ButtonProps {
-  label: string;
-  size?: "small" | "medium" | "large";
-  shape?: "rounded-sm" | "rounded-md";
+export interface PropertyProps {
+  name: string;
+  address: Address;
+  rating: number;
+  category: string[];
+  price: number;
+  offers: {
+    bed: string;
+    shower: string;
+    occupants: string;
+  };
+  image: string;
+  discount: string;
 }
