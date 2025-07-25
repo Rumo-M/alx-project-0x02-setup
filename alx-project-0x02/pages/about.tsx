@@ -1,21 +1,17 @@
 // pages/about.tsx
 
-import Head from "next/head";
+import React from "react";
+import Button from "@/components/common/Button";
 
-const About = () => {
+const About: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>About | ALX Project</title>
-      </Head>
-      <section className="min-h-screen flex flex-col items-center justify-center bg-green-50 text-center">
-        <h1 className="text-4xl font-bold text-green-800 mb-4">About This Project</h1>
-        <p className="text-lg text-gray-600 max-w-2xl">
-          This project is part of the ALX Software Engineering curriculum. It demonstrates how to set up
-          a modern, responsive frontend using Next.js, TypeScript, and Tailwind CSS.
-        </p>
-      </section>
-    </>
+    <div className="max-w-3xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-4">About Us</h1>
+      <p className="mb-6 text-lg">
+        We are a company dedicated to delivering excellent service and innovative solutions.
+      </p>
+      <Button onClick={() => alert("Button clicked!")}>Learn More</Button>
+    </div>
   );
 };
 
