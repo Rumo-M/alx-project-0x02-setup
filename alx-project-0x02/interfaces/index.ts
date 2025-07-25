@@ -1,8 +1,22 @@
-// interfaces/index.ts
+export interface Address {
+  street: string;
+  city: string;
+  zipcode: string;
+}
 
-export interface PostProps {
-  userId: number;
+export interface Company {
+  name: string;
+  catchPhrase: string;
+  bs: string;
+}
+
+export interface UserProps {
   id: number;
-  title: string;
-  content: string;
+  name: string;
+  username: string;
+  email: string;
+  address: Address;
+  phone: string;
+  website: string;
+  company: Company;
 }
