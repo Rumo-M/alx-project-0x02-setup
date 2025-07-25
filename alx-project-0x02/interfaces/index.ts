@@ -18,3 +18,15 @@ export interface PropertyProps {
   image: string;
   discount: string;
 }
+
+export interface UserProps {
+  id: number;
+  name: string;
+  username: string;
+  email: string; // ✅ This is the required field
+  address: {
+    street: string;
+    city: string;
+    zipcode: string;
+  };
+}
