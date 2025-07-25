@@ -1,34 +1,16 @@
-// pages/posts.tsx
 import React from "react";
-import PostCard from "@/components/common/PostCard";
-import { PostProps } from "@/interfaces";
+import Header from "@/components/layout/Header";
 
-interface PostsPageProps {
-  posts: PostProps[];
-}
-
-const PostsPage: React.FC<PostsPageProps> = ({ posts }) => {
+const Posts = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-6">Posts</h1>
-      <div className="grid grid-cols-1 gap-4">
-        {posts.map((post) => (
-          <PostCard key={post.id} post={post} />
-        ))}
+    <>
+      <Header />
+      <div className="p-8">
+        <h1 className="text-3xl font-bold mb-4">Posts Page</h1>
+        <p>This is where the list of posts will be displayed.</p>
       </div>
-    </div>
+    </>
   );
 };
 
-export async function getStaticProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts: PostProps[] = await res.json();
-
-  return {
-    props: {
-      posts,
-    },
-  };
-}
-
-export default PostsPage;
+export default Posts;
